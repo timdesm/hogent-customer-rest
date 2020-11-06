@@ -1,4 +1,5 @@
-﻿using DataLayer.Repository;
+﻿using BusinessLayer.Models;
+using DataLayer.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -35,8 +36,9 @@ namespace DataLayer
             }
         }
 
-        public DbSet<CustomerRepository> CustomerRepositories { get; set; }
-        public DbSet<OrderRepository> OrderRepositories { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (connectionString == null)

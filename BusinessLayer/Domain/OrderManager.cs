@@ -6,5 +6,6 @@ namespace BusinessLayer.Domain
 {
     public class OrderManager
     {
+
     }
 }

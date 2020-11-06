@@ -14,8 +14,8 @@ namespace DataLayer
         public UnitOfWork(DataContext context)
         {
             this.context = context;
-            Customers = new CustomerRepository();
-            Orders = new OrderRepository();
+            Customers = new CustomerRepository(context);
+            Orders = new OrderRepository(context);
         }
 
         public ICustomerRepository Customers { get; private set; }
