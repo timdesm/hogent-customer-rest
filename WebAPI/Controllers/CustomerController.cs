@@ -17,10 +17,10 @@ namespace WebAPI.Controllers
         public CustomerManager CustomerManager { get; set; }
         public OrderManager OrderManager { get; set; }
 
-        public CustomerController()
+        public CustomerController(string db = "production")
         {
-            CustomerManager = new CustomerManager(new UnitOfWork(new DataContext(Program.mode)));
-            OrderManager = new OrderManager(new UnitOfWork(new DataContext(Program.mode)));
+            CustomerManager = new CustomerManager(new UnitOfWork(new DataContext(db)));
+            OrderManager = new OrderManager(new UnitOfWork(new DataContext(db)));
         }
 
         // Get all customers
