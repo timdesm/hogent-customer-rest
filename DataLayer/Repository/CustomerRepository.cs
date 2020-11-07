@@ -11,7 +11,7 @@ namespace DataLayer.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {
-        private DataContext context;
+        protected DataContext context;
         
         public CustomerRepository(DataContext context)
         {

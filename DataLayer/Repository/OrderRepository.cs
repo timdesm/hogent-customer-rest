@@ -9,7 +9,7 @@ namespace DataLayer.Repository
 {
     public class OrderRepository : IOrderRepository
     {
-        private DataContext context;
+        protected DataContext context;
 
         public OrderRepository(DataContext context)
         {

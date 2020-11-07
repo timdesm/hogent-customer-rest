@@ -9,7 +9,7 @@ namespace DataLayer
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private DataContext context;
+        protected DataContext context;
 
         public UnitOfWork(DataContext context)
         {
@@ -27,7 +27,7 @@ namespace DataLayer
             {
                 return context.SaveChanges();
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }

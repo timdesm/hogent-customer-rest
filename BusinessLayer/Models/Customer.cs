@@ -28,7 +28,7 @@ namespace BusinessLayer.Models
         public String Name { get; set; }
         [Required,MinLength(10)]
         public String Address { get; set; }
-        public List<Order> OrderList { get { return _OrderList; } set { _OrderList = value; } }
+        public List<Order> Orders { get { return _OrderList; } set { _OrderList = value; } }
         private List<Order> _OrderList;
     }
 }

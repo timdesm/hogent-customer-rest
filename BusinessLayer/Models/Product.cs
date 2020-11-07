@@ -1,11 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace BusinessLayer.Models
 {
     public enum Product
     {
-        LEFFE, WESTMALLE, ORVAL, DUVEL
+        [EnumMember(Value = "Leffe")]
+        LEFFE,
+
+        [EnumMember(Value = "Westmalle")]
+        WESTMALLE,
+
+        [EnumMember(Value = "Orval")]
+        ORVAL,
+
+        [EnumMember(Value = "Duvel")]
+        DUVEL
     }
 }
